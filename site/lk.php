@@ -24,7 +24,7 @@ else {
     { ?>
         <h3>Тариф:  <?=$tarif?><br></h3>
 
-    <form action="../index.php" method="post">
+    <form action="index.php" method="post">
         <input type="submit" value="Выйти">
     </form>
      

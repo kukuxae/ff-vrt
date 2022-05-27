@@ -34,7 +34,7 @@ else {
         $_SESSION['login']=$myrow['log'];
         $_SESSION['id']=$myrow['id'];
         $_SEASION['role']=$myrow['role']; //
-        echo "Вы успешно вошли на сайт! <a href='../index.php'>Главная страница</a>";
+        echo "Вы успешно вошли на сайт! <a href='index.php'>Главная страница</a>";
         echo "роль ".$_SEASION['role'];
     }
     else {
