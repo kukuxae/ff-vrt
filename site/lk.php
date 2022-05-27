@@ -12,7 +12,7 @@ if (empty($_SESSION['login']) or empty($_SESSION['id']))
 
 }
 else {
-    include ("bd.php");
+    include("bd.php");
     $login1 =$_SESSION['login'];
     $result = mysql_query("SELECT * FROM users WHERE log='$login1'",$db); //извлекаем из базы все данные о пользователе с введенным логином
     $myrow = mysql_fetch_array($result);
@@ -24,7 +24,7 @@ else {
     { ?>
         <h3>Тариф:  <?=$tarif?><br></h3>
 
-    <form action="index.php" method="post">
+    <form action="../index.php" method="post">
         <input type="submit" value="Выйти">
     </form>
      

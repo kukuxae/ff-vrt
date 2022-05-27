@@ -18,7 +18,7 @@ $password = htmlspecialchars($password);
 $login = trim($login);
 $password = trim($password);
 // подключаемся к базе
-include ("bd.php");
+include("bd.php");
 // проверка на существование пользователя с таким же логином
 $result = mysql_query("SELECT id FROM users rs WHERE log='$login'",$db);
 $myrow = mysql_fetch_array($result);
@@ -62,7 +62,7 @@ tarif int(30)
 
     $conn->close();
 
-    echo "Вы успешно зарегистрированы! Теперь вы можете зайти на сайт. <a href='index.php'>Главная страница</a>";
+    echo "Вы успешно зарегистрированы! Теперь вы можете зайти на сайт. <a href='../index.php'>Главная страница</a>";
 }
 else {
     echo "Ошибка! Вы не зарегистрированы.";

@@ -17,7 +17,7 @@ $password = htmlspecialchars($password);
 $login = trim($login);
 $password = trim($password);
 // подключаемся к базе
-include ("bd.php");
+include("bd.php");
 
 $result = mysql_query("SELECT * FROM users WHERE log='$login'",$db); //извлекаем из базы все данные о пользователе с введенным логином
 $myrow = mysql_fetch_array($result);
@@ -34,7 +34,7 @@ else {
         $_SESSION['login']=$myrow['log'];
         $_SESSION['id']=$myrow['id'];
         $_SEASION['role']=$myrow['role']; //
-        echo "Вы успешно вошли на сайт! <a href='index.php'>Главная страница</a>";
+        echo "Вы успешно вошли на сайт! <a href='../index.php'>Главная страница</a>";
         echo "роль ".$_SEASION['role'];
     }
     else {
