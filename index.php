@@ -1,10 +1,10 @@
 <?php
 session_start(); //сессия
     $title = "Главная";
-    include 'header.php';
+    include 'site/header.php';
 if (empty($_SESSION['login']) or empty($_SESSION['id']))
 {
-    include 'logform.php'; // Если пусты, показываем форму входа
+    include 'site/logform.php'; // Если пусты, показываем форму входа
 
     // Если пусты, мы не выводим ссылку
     echo "Вы вошли на сайт, как гость <br><a href='site/reg.php'>Зарегистрироваться</a>";
@@ -15,7 +15,7 @@ else
 {
 
     // Проверяем роль, если админ, добавляем ссылку на админку
-        include("bd.php");
+        include("site/bd.php");
         $login1 =$_SESSION['login'];
         $result = mysql_query("SELECT * FROM users WHERE log='$login1'",$db); //извлекаем из базы все данные о пользователе с введенным логином
         $myrow = mysql_fetch_array($result);
