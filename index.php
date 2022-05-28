@@ -4,10 +4,6 @@ session_start(); //сессия
     include 'header.php';
 if (empty($_SESSION['login']) or empty($_SESSION['id']))
 {
-    include 'logform.php'; // Если пусты, показываем форму входа
-
-    // Если пусты, мы не выводим ссылку
-    echo "Вы вошли на сайт, как гость <br><a href='reg.php'>Зарегистрироваться</a>";
 
 }
 
@@ -21,19 +17,19 @@ else
         $myrow = mysql_fetch_array($result);
         $_SESSION['role'] = $myrow['role'];
         echo "Вы вошли на сайт, как " . $_SESSION['login'];
-       ?> <a href="exit.php">Выйти</a> <?php
-
         if ($_SESSION['role']=='admin') {
-           echo "<br><a href='adm.php'>Управление</a>";
-       }
+    echo "<br><a href='adm.php'>Управление</a> <br>";
+}
+       ?>
+    <a href="exit.php">Выйти</a> <?php
+
+
 
 }
 
 ?>
 
-<form action="lk.php">
-    <input type="submit" value="Личный кабинет">
-</form>
+
 
 </body>
 </html>

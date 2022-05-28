@@ -18,5 +18,5 @@
         <input type="submit" name="submit" value="Войти">
 
         <br>
-        <a href="reg.php">Зарегистрироваться</a>
+        <a>Вы вошли на сайт как гость. </a> <a href="reg.php">Зарегистрироваться</a>
     </p></form>
